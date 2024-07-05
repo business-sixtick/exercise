@@ -3,3 +3,6 @@ http://wikidocs.net/5327
 
 https://pythontutor.com/python-compiler.html#mode=edit
 파이썬 튜터 (각행을 실행하는 모습을 디스플레이 해준다)
+
+https://www.itunion.or.kr/xe/
+아이티노조 (개발자 커뮤니티)
