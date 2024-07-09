@@ -6,3 +6,9 @@ https://pythontutor.com/python-compiler.html#mode=edit
 
 https://www.itunion.or.kr/xe/
 아이티노조 (개발자 커뮤니티)
+
+python.exe -m pip install --upgrade pip 
+파이프?? 업그레이드??
+
+https://wikidocs.net/book/2167
+신한 인디 파이썬 메뉴얼

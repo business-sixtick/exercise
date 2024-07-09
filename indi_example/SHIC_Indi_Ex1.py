@@ -22,11 +22,14 @@ class IndiWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("IndiExample")
 
-        self.IndiTR = QAxWidget("GIEXPERTCONTROL.GiExpertControlCtrl.1")
+        self.IndiTR = QAxWidget("GIEXPERTCONTROL.GiExpertControlCtrl.1") ## ocx 파일을 실행 경로에 복사해주면 되는군. 64비트 환경에서 호환되는군 하위라 그런가???
+        #self.IndiTR = QAxWidget("GIEXPERTCONTROL64.GiExpertControl64Ctrl.1")
         self.IndiTR.ReceiveData.connect(self.ReceiveData)
         self.IndiTR.ReceiveSysMsg.connect(self.ReceiveSysMsg)
 
+        #self.IndiReal = QAxWidget("GIEXPERTCONTROL64.GiExpertControl64Ctrl.1")## 
         self.IndiReal = QAxWidget("GIEXPERTCONTROL.GiExpertControlCtrl.1")
+    
         self.IndiReal.ReceiveRTData.connect(self.ReceiveRTData)
 
         self.rqidD = {}
