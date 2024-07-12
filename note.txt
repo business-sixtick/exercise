@@ -18,3 +18,6 @@ https://www.youtube.com/watch?v=kWiCuklohdY
 
 https://colab.research.google.com/
 구글코랩. 파이썬 웹통합환경
+
+https://kdata.or.kr/
+한국데이터산업진흥원
