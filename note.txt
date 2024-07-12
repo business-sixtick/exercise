@@ -2,7 +2,22 @@ http://wikidocs.net/5327
 파이썬 알고리즘 트레이딩 위키 (인덱스 : sqlite3)
 
 https://pythontutor.com/python-compiler.html#mode=edit
-파이썬 튜터 (각행을 실행하는 모습을 디스플레이 해준다)
+파이썬 튜터 (각행의 실행하는 모습을 디스플레이 해준다)
 
 https://www.itunion.or.kr/xe/
 아이티노조 (개발자 커뮤니티)
+
+python.exe -m pip install --upgrade pip 
+파이프?? 업그레이드??
+
+https://wikidocs.net/book/2167
+신한 인디 파이썬 메뉴얼
+
+https://www.youtube.com/watch?v=kWiCuklohdY
+나도코딩 파이썬 기초 강좌
+
+https://colab.research.google.com/
+구글코랩. 파이썬 웹통합환경
+
+https://kdata.or.kr/
+한국데이터산업진흥원
