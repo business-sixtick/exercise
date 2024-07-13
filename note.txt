@@ -7,9 +7,6 @@ https://pythontutor.com/python-compiler.html#mode=edit
 https://www.itunion.or.kr/xe/
 아이티노조 (개발자 커뮤니티)
 
-python.exe -m pip install --upgrade pip 
-파이프?? 업그레이드??
-
 https://wikidocs.net/book/2167
 신한 인디 파이썬 메뉴얼
 
@@ -21,3 +18,17 @@ https://colab.research.google.com/
 
 https://kdata.or.kr/
 한국데이터산업진흥원
+
+python 
+ - python.exe -m pip install --upgrade pip 파이프?? 업그레이드??
+
+git
+ - 로컬 저장소 형상 관리 (gitbash : git 명령어 터미널)
+ - commit : 저장하다
+ - branch : 분기하다, 가지를뻗다, 갈래, 줄기 (master > main > others... test)
+
+github
+ - 원격 저장소 형상 관리
+ - push : 밀어 넣다
+ - pull : 땡겨 오다 (충돌시 자동으로 merge를 시도하고 사용자에게 해결책을 제시한다.)
+ - fetch : 갖다 붙이다. 가져오다 (충돌시 자동으로 merge 하지 않는다.)
