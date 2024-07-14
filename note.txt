@@ -21,6 +21,9 @@ https://kdata.or.kr/
 
 python 
  - python.exe -m pip install --upgrade pip 파이프?? 업그레이드??
+ - https://pypi.org/   <<파이썬 패키지 인덱스  
+ - pip list             << 파이썬 인스톨 패키지 리스트 ㅋㅋ
+ - pip show 패키지명        << 패키지 정보 보여줌
 
 git
  - 로컬 저장소 형상 관리 (gitbash : git 명령어 터미널)
