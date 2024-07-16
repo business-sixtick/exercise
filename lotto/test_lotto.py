@@ -5,7 +5,8 @@ conn =  sqlite3.connect('C:\source\exercise\data\lotto.db') #C:\source\exercise\
 cursor = conn.cursor()
 rows = cursor.execute('select * from win').fetchall()
 
-pass # TODO
+pass # TODO 가중치 적용 로또
+pass # TODO 
 
 accumulate = {}
 for row in rows :

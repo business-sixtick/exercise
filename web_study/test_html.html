@@ -1,5 +1,13 @@
+<!DOCTYPE html> <!-- html5 선언 -->
 <html>
     <head lang="ko" class="head">
+        <meta charset="utf-8">
+        <!-- http 헤더를 정의. 브라우저가 문서를 처리하는데 영향을 미침 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 반응형 웹 디자인 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>타이틀</title>
+        <script></script>
 
     </head>
     <body>
@@ -14,6 +22,16 @@
          <!--
          <태그명 속성명="속성값">
          -->
+
+         <!-- division 의 약자 . 콘텐츠를 구획별로 나누기 위해 사용되는 블록 레벨 요소-->
+         <div class="test" style="border: 1; border-color: black;">
+            1영역
+         </div>
+         <div class="movie">
+            <p>영화소개</p>
+            <!-- span 인라인 요소 : 블럭 안에 자리함-->
+            <p>영화를 <span style="font-size: large; color: blue;">알차게</span> 소개하는 영역입니다.</p>
+         </div>
         <h1>안녕</h1>
         <h2>안녕</h2>
         <h3>안녕</h3>
@@ -38,15 +56,12 @@
                 <li>순서없는 리스트 하나</li>
                 <li>순서없는 리스트 둘</li>
             </ul>
+            <hr><!--수평선 horizontal-->
             <ol>
+                <h3 style="color: blueviolet; font-weight: bold;">리스트</h3>
                 <li>순서있는 리스트 하나</li>
                 <li>순서있는 리스트 둘</li>
-                <li>
-                    <dl>
-                        <dt>정의 리스트 용어</dt>
-                        <dd>정의 리스트 설명</dd>
-                    </dl>    
-                </li>
+                <li>순서있는 리스트 셋</li>
             </ol>
             <dl>
                 <dt>정의 리스트 용어</dt>
@@ -89,40 +104,91 @@
             </table>
         </p>
 
-         <!--
+        <p>
+            <table>
+                <thead>
+                    1
+                    <tr>
+                        <th>해드1</th>
+                        <th>해드2</th>
+                        <th>해드3</th>
+                        <th>해드4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    2
+                    <tr>
+                        <td>1행1</td>
+                        <td>1행2</td>
+                        <td>1행3</td>
+                        <td>1행4</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    3
+                    <tr>
+                        <td>1행1</td>
+                        <td>1행2</td>
+                        <td>1행3</td>
+                        <td>1행4</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </p>
 
-<table>: 테이블을 정의합니다.
-<tr>: 테이블 행을 정의합니다.
-<td>: 테이블 데이터를 정의합니다.
-<th>: 테이블 헤더를 정의합니다.
-<thead>: 테이블의 머리 부분을 정의합니다.
-<tbody>: 테이블의 본문 부분을 정의합니다.
-<tfoot>: 테이블의 바닥 부분을 정의합니다.
-폼 태그
-<form>: 폼을 정의합니다.
-<input>: 다양한 유형의 입력 요소를 정의합니다.
-<textarea>: 여러 줄의 텍스트 입력 요소를 정의합니다.
-<button>: 클릭 가능한 버튼을 정의합니다.
-<select>: 드롭다운 리스트를 정의합니다.
-<option>: 드롭다운 리스트의 옵션을 정의합니다.
-<label>: 폼 요소의 레이블을 정의합니다.
-섹션 태그
-<div>: 블록 레벨 요소로, 구획을 정의합니다.
-<span>: 인라인 요소로, 구획을 정의합니다.
-<header>: 문서의 머리말 섹션을 정의합니다.
-<footer>: 문서의 바닥글 섹션을 정의합니다.
-<main>: 문서의 주요 콘텐츠를 정의합니다.
-<section>: 문서의 섹션을 정의합니다.
-<article>: 독립적인 콘텐츠를 정의합니다.
-<nav>: 내비게이션 링크를 정의합니다.
-<aside>: 문서의 측면 콘텐츠를 정의합니다.
-기타 태그
-<canvas>: 그래픽을 위한 캔버스를 정의합니다.
-<svg>: SVG 그래픽을 정의합니다.
-<script>: 자바스크립트를 포함합니다.
-<noscript>: 자바스크립트가 비활성화된 경우에 보여줄 콘텐츠를 정의합니다.
+        <p>
 
--->
+            <form>
+                form
+            </form>
+        </p>
+
+        <p>
+            <input title="title" name="name" value="값">
+        </p>
+
+        <p>
+            <textarea>
+                뭐라
+                뭐라
+            </textarea>
+        </p>
+
+        <p>
+            <button>
+                버튼
+            </button>
+        </p>
+
+        <p>
+            <label>select</label>
+            <select>
+                <option>item1</option>
+                <option>item2</option>
+                <option>item3</option>
+            </select>
+        </p>
+
+        <div>
+            <span>span</span>
+        </div>
+        <header>
+            <nav>header</nav>
+        </header>
+        <main>
+            <article>main</article>
+        </main>
+        <footer>
+            <section>footer</section>
+        </footer>
+
+
+        <div>
+            <canvas>
+                canvas
+            </canvas>
+        </div>
+
     </body>
 </html>
 
