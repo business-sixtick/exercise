@@ -1,10 +1,14 @@
-import test_module
-tm = test_module.c_test()
-tm.run()
-# 아 노트에서는 안되는데 py에서는 모듈 else 구문이 타네
+def count_up_to(max):
+    count = 1
+    while count <= max:
+        print('함수 ', count)
+        yield count
+        count += 1
+        print('카운트 ', count)
 
-import inspect    #모듈 위치를 알아내는 모듈
-print(inspect.getfile(test_module)) # 예시
-
+counter = count_up_to(5)
+print('호출자 ', counter, type(counter))
+for num in counter:
+    print(num, ' 반복문')
 
 
