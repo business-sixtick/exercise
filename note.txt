@@ -1,23 +1,7 @@
-http://wikidocs.net/5327
-파이썬 알고리즘 트레이딩 위키 (인덱스 : sqlite3)
-
-https://pythontutor.com/python-compiler.html#mode=edit
-파이썬 튜터 (각행의 실행하는 모습을 디스플레이 해준다)
-
-https://www.itunion.or.kr/xe/
-아이티노조 (개발자 커뮤니티)
-
-https://wikidocs.net/book/2167
-신한 인디 파이썬 메뉴얼
-
-https://www.youtube.com/watch?v=kWiCuklohdY
-나도코딩 파이썬 기초 강좌
-
-https://colab.research.google.com/
-구글코랩. 파이썬 웹통합환경
-
-https://kdata.or.kr/
-한국데이터산업진흥원
+extend program
+ - python (Microsoft)
+ - jupyter (Microsoft)
+ - Live Preview (Microsoft)
 
 python 
  - python.exe -m pip install --upgrade pip 파이프?? 업그레이드??
@@ -35,3 +19,26 @@ github
  - push : 밀어 넣다
  - pull : 땡겨 오다 (충돌시 자동으로 merge를 시도하고 사용자에게 해결책을 제시한다.)
  - fetch : 갖다 붙이다. 가져오다 (충돌시 자동으로 merge 하지 않는다.)
+
+
+링크들
+    http://wikidocs.net/5327 
+    파이썬 알고리즘 트레이딩 위키 (인덱스 : sqlite3)
+
+    https://pythontutor.com/python-compiler.html#mode=edit
+    파이썬 튜터 (각행의 실행하는 모습을 디스플레이 해준다)
+
+    https://www.itunion.or.kr/xe/
+    아이티노조 (개발자 커뮤니티)
+
+    https://wikidocs.net/book/2167
+    신한 인디 파이썬 메뉴얼
+
+    https://www.youtube.com/watch?v=kWiCuklohdY
+    나도코딩 파이썬 기초 강좌
+
+    https://colab.research.google.com/
+    구글코랩. 파이썬 웹통합환경
+
+    https://kdata.or.kr/
+    한국데이터산업진흥원
