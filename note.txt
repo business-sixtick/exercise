@@ -22,6 +22,14 @@ github
 
 
 링크들
+    강사 자료
+    https://docs.google.com/spreadsheets/d/1VycxDKxdfCSXc6ND9b1JKXgK1GTrEUeHD-mqC4DXN9U/edit?gid=1543885465#gid=1543885465
+    
+    참가 Zoom 회의
+    https://us06web.zoom.us/j/9178246843?pwd=R8dQVNPXIO4LabQaSRJS6SADbHZHL9.1
+    회의 ID: 917 824 6843
+    암호: 1111
+
     http://wikidocs.net/5327 
     파이썬 알고리즘 트레이딩 위키 (인덱스 : sqlite3)
 
