@@ -47,7 +47,7 @@ for row in rows : # 당첨된 테이블을 순회 한다.
 conn.close()
 
 weight_list = [ int(i[1][1]) for i in accumulate.items()]
-print(len(weight_list), weight_list) # 가중치는 int 리스트로 줘야 한다. 
+# print(len(weight_list), weight_list) # 가중치는 int 리스트로 줘야 한다. 
 
 def lotto_get() :
     import random
@@ -61,21 +61,25 @@ def lotto_get() :
     
     return (sorted(lotto_set))
 
-lotto_list = []
-
-while len(lotto_list) <= 10 : 
-    if len(lotto_list) < 10 : 
-        lotto_list.append(lotto_get())
-    else :
-        if lotto_list[-1] == lotto_list[-2] :
-            break
-        else :
-            lotto_list.pop(0)
+def a_weight_lotto():
+    lotto_list = []
+    #while len(lotto_list) <= 10 : 
+    while True : 
+        if len(lotto_list) < 10 : 
             lotto_list.append(lotto_get())
+        else :
+            if lotto_list[-1] == lotto_list[-2] :
+                break
+            else :
+                lotto_list.pop(0)
+                lotto_list.append(lotto_get())
+    return lotto_list[-1]
+
+print(a_weight_lotto())
 
 
-for i, val in enumerate(lotto_list) :
-    if i in [4, 5, 6, 7, 8] :
-        print(val)
+# for i, val in enumerate(lotto_list) :
+#     if i in [4, 5, 6, 7, 8, 9] :
+#         print(val)
     
-print(len(weight_list), weight_list)
+# print(len(weight_list), weight_list)
