@@ -1,0 +1,12 @@
+/*
+cascading style sheet 전이되는 스타일 문서
+link 태그로 전달한다. rel="stylesheet" href="스타일시트파일.css" 
+ 
+태그 안에 id, class 에 접근하여 적용 할 수있다.
+id 유일한 값
+class 그룹 가능한 값
+데이터 크롤링 할때도 쓰임.
+
+
+
+*/
