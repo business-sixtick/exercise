@@ -1,0 +1,25 @@
+h1{
+    color: red;
+}
+h2{
+    color: blue;
+}
+li{
+    color: green;
+}
+#a_space{
+    background-color: aqua;
+    
+}
+#b_space{
+    background-color: blueviolet;
+}
+div{
+    color: red;
+    font-size: large;
+    font-weight: bold;
+}
+div.div_group{
+    color: darkblue;
+    background-color: bisque;
+}
