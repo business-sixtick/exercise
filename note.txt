@@ -22,6 +22,9 @@ github
 
 
 링크들
+    예제문제
+    https://codeup.kr/index.php
+    
     강사 자료
     https://docs.google.com/spreadsheets/d/1VycxDKxdfCSXc6ND9b1JKXgK1GTrEUeHD-mqC4DXN9U/edit?gid=1543885465#gid=1543885465
     
