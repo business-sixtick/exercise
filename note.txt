@@ -6,7 +6,7 @@ extend program
 python 
  - python.exe -m pip install --upgrade pip 파이프?? 업그레이드??
  - https://pypi.org/   <<파이썬 패키지 인덱스  
- - pip list             << 파이썬 인스톨 패키지 리스트 ㅋㅋ
+ - pip list             << 파이썬 인스톨 패키지 리스트 ㅋㅋ  (scripts 폴더안에 있음)
  - pip show 패키지명        << 패키지 정보 보여줌
 
 git
@@ -22,6 +22,11 @@ github
 
 
 링크들
+
+    아나콘다 anaconda (통합 개발 환경 구축 툴)
+    https://www.anaconda.com/
+    https://www.anaconda.com/download/success
+
     예제문제
     https://codeup.kr/index.php
     
