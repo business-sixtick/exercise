@@ -7,19 +7,71 @@ h2{
 li{
     color: green;
 }
+/* :동적 가상클래스 선택자 */
+li:hover{
+    color: blue;
+    font-weight: bold;
+}
+li:active{
+    color: red;
+    font-size: large;
+}
+/* 공백은 하위 선택자 ::가상의 선택자*/
+ol li:nth-child(3)::before{
+    color:red;
+    content: '곱빼기';
+}
 #a_space{
     background-color: aqua;
     
 }
+/* #아이디 */
 #b_space{
     background-color: blueviolet;
 }
+
 div{
     color: red;
     font-size: large;
     font-weight: bold;
 }
+/* .클래스 */
 div.div_group{
     color: darkblue;
-    background-color: bisque;
+}
+a.test_a[href='#']:hover{
+    color: red;
+}
+/*a태그의 속성값을 참조*/
+a[href='#']{ 
+    color: red;
+}
+a:hover{
+    font-weight: bold;
+    font-size: larger;
+}
+a.test_a{
+    display: inline;
+}
+
+/* 중첩 클래스 . 태그쪽에서는 띄어쓰기로 구분됨*/
+a.test_b.test_a{ 
+    display: block;
+}
+
+/*모든 a태그와  test_b 클래스*/
+a, .test_b{
+    background-color: antiquewhite;
+}
+
+/* 하위찾는 표현 >  ___ + 인접형제선택자 ___ ~ 형제선택자*/
+body > ul > li:nth-child(1) ~ li  {
+    color: blue;
+    font-size: large;
+}
+p{
+    color: red;
+}
+input:checked + label{
+    color: red;
 }
