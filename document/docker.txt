@@ -1,0 +1,10 @@
+docker 도커
+- 실행환경을 이미지화하여 배포 및 구축의 편의를 꾀한다.
+
+
+명령어
+$ docker seach 이미지명 -- 허브에서 배포 이미지를 검색한다
+$ docker images -- 설치된 이미지 목록 출력
+$ docker pull 이미지명:버전 -- 이미지를 허브에서 받는다. :latest 최종버전
+$ docker run <옵션> <이미지명> <실행할파일> --  이미지를 실행한다.
+ex> docker run -i -t --name hello ubuntu /bin/bash -- 우분투이미지를 실행

@@ -22,6 +22,11 @@ github
 
 
 링크들
+    docker windows install
+    https://docs.docker.com/desktop/install/windows-install/
+
+    docker 책
+    https://pyrasis.com/jHLsAlwaysUpToDateDocker
 
     아나콘다 anaconda (통합 개발 환경 구축 툴)
     https://www.anaconda.com/
