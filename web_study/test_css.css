@@ -33,8 +33,14 @@ a.test_a[href]:hover{
 - rem : html 태그의 텍스트 크기에 상대적인 크기
 - 
 
-보더 border 기준 외부여백이 마진 margin  내부여백이 패딩 padding
+보더 border 기준 외부여백이 마진 margin (마진은겹침가능)  내부여백이 패딩 padding
 보더 안쪽에 내용 content
+
+포지션 position 속성
+
+
+
+
 
 
 */

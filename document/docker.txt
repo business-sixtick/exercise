@@ -8,3 +8,21 @@ $ docker images -- 설치된 이미지 목록 출력
 $ docker pull 이미지명:버전 -- 이미지를 허브에서 받는다. :latest 최종버전
 $ docker run <옵션> <이미지명> <실행할파일> --  이미지를 실행한다.
 ex> docker run -i -t --name hello ubuntu /bin/bash -- 우분투이미지를 실행
+ex> exit -- 배쉬에서 exit를 입력해서 빠져나오면 컨테이너가 정지된 상태가 된다
+$ docker ps -a  -- 컨테이너 목록 출력 -a 옵션은 정지된것까지 포함
+$ docker start <컨테이너이름> -- 컨테이너를 시작한다. 프로그램을 시작하는것은 아닌듯?
+$ docker restart <컨테이너이름> -- 컨테이너를 재시작한다. 조금 걸리네?? 5초??
+$ docker attach <컨테이너이름> -- 컨테이너에 접속한다. 정지되어있을경우 실패한다
+- 배쉬 실행중 ctrl+p,q 를 누르면 컨테이너를 정지하지 않고 빠져나온다. 
+$ docker exec <컨테이너이름> <배쉬명령어> -- 외부에서 컨테이너 안에 명령어를 실행한다.
+ex> docker exec hello echo 'hello'  (컨테이너 상태가 up 여야 한다.)
+$ docker stop <컨테이너이름> -- 컨테이너를 정지 시킨다. 
+$ docker rm <컨테이너이름> -- 컨테이너를 삭제 시킨다. (이미지와 다름) 
+ex> docker ps -a 를 쳐도 목록에 안나옴. 이름을 달리해서 같은 이미지로 여러개의 컨테이너를 만들수 있다
+$ docker rmi <이미지이름>:<태그> -- 태그를 안붙이면 여러버전의 같은 이미지가 모두 삭제된다.
+ex> docker images 로 확인 가능하다
+
+
+리눅스 배쉬 bash 명령어
+$ hello = 'hello world'
+$ echo $hello  --  변수를 호출할때만 앞에 $를 붙인다
