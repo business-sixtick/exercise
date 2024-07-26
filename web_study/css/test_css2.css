@@ -12,3 +12,13 @@ div.list{
     padding: 10px;
     margin: 10px;
 }
+h2{
+    background-color: red;
+    float: left; /*  인접한 태그와 붙는다? 섞인다 */
+}
+h3{
+    background-color: blue;
+}
+h4{
+    background-color: green;
+}

@@ -3,6 +3,9 @@ extend program
  - jupyter (Microsoft)
  - Live Preview (Microsoft)
 
+visual studio code
+ - 팔렛트에서 Preferences: Configure User Snippets -- 템플릿 설정
+
 python 
  - python.exe -m pip install --upgrade pip 파이프?? 업그레이드??
  - https://pypi.org/   <<파이썬 패키지 인덱스  
@@ -22,6 +25,9 @@ github
 
 
 링크들
+    폰트어썸 (반응형 웹 api)
+    https://docs.fontawesome.com/web/ 
+
     docker windows install
     https://docs.docker.com/desktop/install/windows-install/
 

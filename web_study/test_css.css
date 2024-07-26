@@ -37,6 +37,10 @@ a.test_a[href]:hover{
 보더 안쪽에 내용 content
 
 포지션 position 속성
+fixed 절대 좌표 (스크롤도 무시)
+absolute 절대 좌표 
+
+clear : float 속성 지움
 
 
 
