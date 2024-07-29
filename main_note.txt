@@ -25,7 +25,7 @@ github
 
 
 링크들
-    노드 node.js
+    노드 node.js  (javascript를 디버깅 하려면 필요하다.)
     https://nodejs.org/en/
     
     폰트어썸 (반응형 웹 api)
@@ -68,7 +68,7 @@ github
     나도코딩 파이썬 기초 강좌
 
     https://colab.research.google.com/
-    구글코랩. 파이썬 웹통합환경
+    구글코랩. 파이썬 웹통합환경 (리소스 땡겨오기. tpu : 구글에서 2016년 5월에 발표한 데이터 분석 및 딥러닝용 NPU를 모아놓은 하드웨어이다. (Neural Processing Unit, 신경망 처리장치) )
 
     https://kdata.or.kr/
     한국데이터산업진흥원
