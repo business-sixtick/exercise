@@ -52,3 +52,19 @@ for (const key in object={'name': 'cho', 'age':42}) {
     }
 }
 
+
+// 삼항연산자 => 조건 ? 참일때 : 거짓일때 
+console.log(1 == 1 ? 'yes' : 'no')
+
+// switch 대칭 값 찾을때 ?? 딕셔너리가 더 나을듯
+let key = 1;
+switch (key) {
+    case 1:
+        console.log('1');
+        break;
+    default:
+        break;
+}
+
+
+
