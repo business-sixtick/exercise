@@ -33,6 +33,7 @@ array.forEach(element => {
 
 // 배열이나 리스트
 for (const iterator of object=[1,2,3,4,5]) {
+    // 제어문 
     if(iterator % 2 == 0){
         console.log(iterator + '짝')
     }else if(iterator % 2 != 0){

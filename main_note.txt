@@ -25,6 +25,9 @@ github
 
 
 링크들
+    머신러닝
+    https://scikit-learn.org/stable/
+    
     노드 node.js  (javascript를 디버깅 하려면 필요하다.)
     https://nodejs.org/en/
     
