@@ -12,7 +12,7 @@ python
  - pip list             << 파이썬 인스톨 패키지 리스트 ㅋㅋ  (scripts 폴더안에 있음)
  - pip show 패키지명        << 패키지 정보 보여줌
 
-git
+git (.git/info/exclude 파일에 규칙을 정할수있다. 제외 파일 설정 가능 ignore)
  - 로컬 저장소 형상 관리 (gitbash : git 명령어 터미널)
  - commit : 저장하다
  - branch : 분기하다, 가지를뻗다, 갈래, 줄기 (master > main > others... test)
