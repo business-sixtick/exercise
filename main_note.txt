@@ -16,6 +16,22 @@ git
  - 로컬 저장소 형상 관리 (gitbash : git 명령어 터미널)
  - commit : 저장하다
  - branch : 분기하다, 가지를뻗다, 갈래, 줄기 (master > main > others... test)
+ - git config --list
+ - git config --global user.name 'sixtick'
+ - git config --global user.email 'business4dyd@gmail.com'
+ - git status
+ - git init
+ - ls -a
+ - rm -rf .git
+ - git config --local --list
+ - git config --local user.name 'sixtick_test'
+ - git config --local user.email 'business4dyd@gmail.com'
+ - git branch -m main
+ - git remote add origin https://github.com/business-sixtick/test.git
+ - git add .
+ - git status
+ - git commit -m 'init'
+ - git push -u origin main
 
 github
  - 원격 저장소 형상 관리. 코드에디터도 있다.
@@ -25,6 +41,9 @@ github
 
 
 링크들
+    수학방
+    https://mathbang.net/#gsc.tab=0
+
     머신러닝
     https://scikit-learn.org/stable/
     
