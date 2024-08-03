@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,87 +11,253 @@
         //     console.log("DOM fully loaded and parsed");
         let text_arr = "SIXTICK".split('');
         let name_el = Object
-        let text_delay = 500 // 1000 == 1초
-        
+        let text_delay = 100 // 1000 == 1초
+
         function text_change() {
             setTimeout(text_del, text_delay);
         }
-        function text_del(){
-            if(name_el.textContent.length != 0){
-                name_el.textContent = name_el.textContent.slice(0, name_el.textContent.length-1)
+        function text_del() {
+            if (name_el.textContent.length != 0) {
+                name_el.textContent = name_el.textContent.slice(0, name_el.textContent.length - 1)
                 setTimeout(text_del, text_delay);
             }
-            else{
-                if(text_arr != 0){
+            else {
+                if (text_arr != 0) {
                     setTimeout(text_add, text_delay);
                 }
             }
         }
-        function text_add(){
-            if(text_arr != 0){
+        function text_add() {
+            if (text_arr != 0) {
                 name_el.textContent += text_arr.shift() //pop()반대. 앞에서뺌
-                setTimeout(text_add, text_delay);
-            } 
-            else{
+                if(name_el.textContent == "SIXTICK"){
+                    setTimeout(text_add, text_delay + 500);
+                }else{
+                    setTimeout(text_add, text_delay);
+                }
+                
+            }
+            else {
                 text_arr = "SIXTICK".split('');
                 setTimeout(text_del, text_delay);
-            }  
+            }
         }
-        function init(){
+        
+
+        function footer_time() {
+            footer_text = document.querySelector('#footer_time')
+            now_date = new Date()
+            now_day = '일요일'
+            switch (now_date.getDay()) {
+                case 0:
+                    now_day = '일'
+                    break;
+                case 1:
+                    now_day = '월'
+                    break;
+                case 2:
+                    now_day = '화'
+                    break;
+                case 3:
+                    now_day = '수'
+                    break;
+                case 4:
+                    now_day = '목'
+                    break;
+                case 5:
+                    now_day = '금'
+                    break;
+                case 6:
+                    now_day = '토'
+                    break;
+            }
+            date_text = `${now_date.getFullYear()}년 ${now_date.getMonth()}월 ${now_date.getDate()}일 ` +
+                `${now_date.getHours()}시 ${now_date.getMinutes()}분 ${now_date.getSeconds()}초 ` +
+                `${now_day}요일 `
+            footer_text.textContent = date_text
+        }
+        function scrollToTarget(text) {
+            const targetElement = document.getElementById(text);
+            targetElement.scrollIntoView({ behavior: 'smooth' }); // 스크롤을 가질때 이동할수 있음
+        }
+
+        // 초기화 
+        function init() {
             name_el = document.querySelector("#header_id");
             name_el.textContent = 'SIXTICK'
             text_change()
+            setInterval(footer_time, 1000)
         }
-
         window.addEventListener("load", init); // 문서 로딩 이 끝나면 호출
     </script>
     <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.content{
+            border: 1px solid grey;
+            /* width: 1280; */
+            /* position: relative; */
+            background-color: beige;
+            margin-top: 200px;
+            padding: 50px;
+        }
+        main{
+            background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA3MDlfMTI1%2FMDAxNzIwNTA5OTE3ODEw.5rHPp-HeVAQqNetRAmhUarsus9lCtRwpehyMK5PWXh4g.c-mX7GDQ5_DcFOIjfepA-F58iHS__dcRYeR36bZgKf8g.JPEG%2FKakaoTalk_Photo_2024-07-09-15-36-05_008.jpeg&type=sc960_832);
+            background-attachment:fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:1650px; /*이미지 크기인가? ㅋ*/
+        }
+        header div.header{
+            background-color: black;
+            position: fixed;
+            display: block;
+            height: 50px;
+            color: white;
+            top:0;
+            z-index:1;
+            width:100%;
+            padding:1rem;
+        }
+        div.header h1{
+            display: inline;
+        }
+        ul.header{
+            display: inline;
+            position: absolute;
+            right: 0;
+            padding-right: 50px;
+            padding-top: 20px;
+        }
+        ul.header li{
+            display: inline;
+        }
+        ul.header li button{
+            font-weight: bold;
+            padding: 5px;
+            color: white;
+            background-color: black;
+            border: none;
+            cursor: pointer;
+        }
+        ul.header li button:hover{
+            color: greenyellow;
+            
+        }
+        
+        footer{
+            background-color: black;
+            position: fixed;
+            display: block;
+            height: 50px;
+            color: white;
+            bottom: 0;
+            z-index:1;
+            width:100%;
+            padding:1rem;
+        }
+        footer#footer_time{
+            /* display: inline; */
+            text-align: right;
+        }
+
+        #contact div.content{
+            padding-bottom: 200px;
+        }
+    </style>
 </head>
+
 <body>
     <!-- header 시맨틱 태그 의미만 있음. -->
     <header>
-        <div>
-            <span>IIIIII&nbsp;</span>
-            <span id="header_id"></span>
+        <div class="header">
+            <h1>
+                <span>IIIIII&nbsp;</span>
+                <span id="header_id"></span>
+            </h1>
+            <ul class="header">
+                <li><button onclick="scrollToTarget('about')">about</button></li>
+                <li><button onclick="scrollToTarget('features')">features</button></li>
+                <li><button onclick="scrollToTarget('portfolio')">portfolio</button></li>
+                <li><button onclick="scrollToTarget('contact')">contact</button></li>
+            </ul>
         </div>
     </header>
 
     <!-- main -->
     <main>
-        <div>main</div>
+        <!-- section 1 about -->
+        <section id="about" class="about">
+            <div class="content">
+                <h3>Who Am I</h3>
+                <h1>About Me</h1>
+                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA1MjJfMjgx%2FMDAxNzE2Mzc0NDg4MDA3.0gXHBK-rTVsvt0xD9pdniFmJZMARF837KpqiTgyFWFMg.8D5KpIOuJhkBJHCo9nG-MCFmt5FpY660KJhP4ayyoHAg.PNG%2Fimage.png&type=sc960_832">
+                <h2>Hello, <strong>I`m Sucoding</strong></h2>  
+                <p>
+                    I`m Web Publisher And Web Front-End Developer.
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe veritatis aperiam accusantium.
+                    
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit praesentium doloremque quos quis est officiis.
+                    
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, omnis quibusdam.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- section 2 features -->
+        <section id="features" class="features">
+            <div class="content">
+                <h1>features</h1>
+            </div>
+        </section>
+
+        <!-- section 3 portfolio -->
+        <section id="portfolio" class="portfolio">
+            <div class="content">
+                <h1>portfolio</h1>
+                <ul>
+                    <li>python</li>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- section 4 contact -->
+        <section id="contact" class="contact">
+            <div class="content">
+                <h3>CONTACT</h3>
+                <h1>Contact With Me</h1>
+                <ul>
+                    <li>name : 조영훈</li>
+                    <li>phone : 010 4242 9649</li>
+                    <li>address : 경기도 포천시 신읍동</li>
+                    <li>email : hungh4@naver.com</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <!-- section 1 about -->
-    <section id="about" class="about">
-        <div>about</div>
-    </section>
 
-    <!-- section 2 features -->
-    <section id="features" class="features">
-        <div>features</div>
-    </section>
 
-    <!-- section 3 portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div>
-            <ol>
-                
-            </ol>
-        </div>
-    </section>
 
-    <!-- section 4 contact -->
-    <section id="contact" class="contact">
-        <div>contact</div>
-    </section>
 
-    
-    
 
     <!-- footer -->
     <footer>
-        <div>footer</div>
+        <div>
+            <h1>footer</h1>
+            <div id="footer_time"></div>
+        </div>
     </footer>
 
 </body>
+
 </html>
