@@ -28,7 +28,7 @@
         }
         function text_add(){
             if(text_arr != 0){
-                name_el.textContent += text_arr.shift()
+                name_el.textContent += text_arr.shift() //pop()반대. 앞에서뺌
                 setTimeout(text_add, text_delay);
             } 
             else{
@@ -72,7 +72,11 @@
 
     <!-- section 3 portfolio -->
     <section id="portfolio" class="portfolio">
-        <div>portfolio</div>
+        <div>
+            <ol>
+                
+            </ol>
+        </div>
     </section>
 
     <!-- section 4 contact -->
