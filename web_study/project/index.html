@@ -5,13 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        // document.addEventListener("DOMContentLoaded", function(event) {
+        //     console.log("DOM fully loaded and parsed");
+        let text_arr = "SIXTICK".split('');
+        let name_el = Object
+        let text_delay = 500 // 1000 == 1초
+        
+        function text_change() {
+            setTimeout(text_del, text_delay);
+        }
+        function text_del(){
+            if(name_el.textContent.length != 0){
+                name_el.textContent = name_el.textContent.slice(0, name_el.textContent.length-1)
+                setTimeout(text_del, text_delay);
+            }
+            else{
+                if(text_arr != 0){
+                    setTimeout(text_add, text_delay);
+                }
+            }
+        }
+        function text_add(){
+            if(text_arr != 0){
+                name_el.textContent += text_arr.shift()
+                setTimeout(text_add, text_delay);
+            } 
+            else{
+                text_arr = "SIXTICK".split('');
+                setTimeout(text_del, text_delay);
+            }  
+        }
+        function init(){
+            name_el = document.querySelector("#header_id");
+            name_el.textContent = 'SIXTICK'
+            text_change()
+        }
 
-    <link rel="stylesheet" href="./css/index.css">
+        window.addEventListener("load", init); // 문서 로딩 이 끝나면 호출
+    </script>
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
 </head>
 <body>
     <!-- header 시맨틱 태그 의미만 있음. -->
     <header>
-        <div>header</div>
+        <div>
+            <span>IIIIII&nbsp;</span>
+            <span id="header_id"></span>
+        </div>
     </header>
 
     <!-- main -->
