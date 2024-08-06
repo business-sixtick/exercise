@@ -47,4 +47,8 @@ for (;;){
 }
 // 5 4 3 2 1
 
+lambda = (x) => { return x; } //  화살표 함수(arrow function) 콜백함수 쓸때 간략하게 쓸려고 만듦.
+lambda = x =>  x //  화살표 함수(arrow function) 괄호, return 키워드 생략 가능
+console.log(lambda('hi'))
+
 

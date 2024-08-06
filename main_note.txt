@@ -41,6 +41,13 @@ github
 
 
 링크들
+    R 통계 데이터분석 (프로젝트 먼저 깔고 스튜디오 깔고)
+    https://www.r-project.org/
+    https://posit.co/download/rstudio-desktop/
+
+    택스TeX 문법
+    https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95
+
     정규식 테스트
     https://regex101.com/
     
