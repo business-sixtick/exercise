@@ -41,6 +41,12 @@ github
 
 
 링크들
+    공공데이터포털
+    https://www.data.go.kr/index.do
+
+    싸이킷런 튜토리얼
+    https://scikit-learn.org/1.3/tutorial/machine_learning_map/index.html
+
     R 통계 데이터분석 (프로젝트 먼저 깔고 스튜디오 깔고)
     https://www.r-project.org/
     https://posit.co/download/rstudio-desktop/
