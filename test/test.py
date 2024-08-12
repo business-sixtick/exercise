@@ -1,22 +1,24 @@
 import platform
 print('python version : ', platform.architecture())
+import time
+def message_time():
+    try:
+        count = 0   # 살짝 클로저 냄새가 나는군~ ㅋㅋ
+        while True:        # 코루틴을 계속 유지하기 위해 무한 루프 사용
+            count += 1
+            x = (yield count)    # 코루틴 바깥에서 값을 받아옴, yield를 괄호로 묶어야 함
+                                # yield 뒤에 값을 넣어주면 반환을 함
+            print(x, f'\n<{time.asctime()}>')
+    except GeneratorExit as e :     # close() 할때 발생하는 예외인데
+        print(e, type(e).__name__)  # 굳이 안잡아도 됨. 에러를 발생시키지 않음. 
+        print(x, count)             # 예외에도 등급이 있나??
+ 
+msg = message_time()
+#next(msg)           # yield까지 실행해서 대기상태로 만듦
+print(msg.send(None)) # 내부적으로 next와 같은 효과를 냄
 
-import pandas as pd
-path = r'C:\source\exercise\data\typhoon.csv'
-path = path.replace('\\', '/')
-print(path)
-typhoon_df = pd.read_csv(path, encoding='cp949')
-typhoon_df
-typhoon_kor_df = typhoon_df.copy()
-typhoon_asia_df = typhoon_df.copy()
-split = lambda x : int(str(x).split('(')[0])
-split_kor = lambda x : int(str(x).split('(')[1][0])
-# typhoon_kor_df['1월'] = [split(i) for i in typhoon_df['1월'].values ]
-typhoon_kor_df['1월'] = [split_kor(i) for i in typhoon_df['1월'].values ]
-for i in typhoon_kor_df.columns:
-    # print(i)
-    typhoon_asia_df[i] = [split(i) for i in typhoon_df[i].values ]
-    typhoon_kor_df[i] = [split_kor(i) for i in typhoon_df[i].values ]
-# 태풍이 증가하고 있는가?
-# typhoon_df
-typhoon_kor_df
+msg.send('hello~ nice meet you^^ ')   # 값을 보내고 다음 대기상태까지 진행
+print(msg.send('see you again')) 
+
+msg.close() # 코루틴 종료
+print('프로그램 종료')
