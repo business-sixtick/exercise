@@ -30,8 +30,9 @@ print("현재 파일의 디렉토리:", current_dir)
 app = Flask(__name__)
 @app.route('/') # 접속하는 url
 def index():
-  #return 'hello world' # 들어오네?
-  return render_template('index.html')
+  content = '<h1>hello world</h1>'
+  return content # 들어오네?
+  return render_template('.\index.html')
 
 if __name__=="__main__":
   app.run(host="127.0.0.1", port=port ,debug=True) # 디버그가 켜져 있으면 자동으로 리로드 한다.

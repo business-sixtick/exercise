@@ -41,6 +41,12 @@ github
 
 
 링크들
+    텐서플로
+    https://www.tensorflow.org/?hl=ko
+    
+    ai 학습용 데이터
+    https://aihub.or.kr/aihubdata/opendata/list.do?ref=blog-ko.superb-ai.com
+
     공공데이터포털
     https://www.data.go.kr/index.do
 

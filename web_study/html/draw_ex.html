@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing Example</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Draw on the Canvas</h1>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <button id="downloadBtn">Download as 28x28 Image</button>
+    <button id="sendBtn">Send to Server</button>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let painting = false;
+
+        function startPosition(e) {
+            painting = true;
+            draw(e);
+        }
+
+        function endPosition() {
+            painting = false;
+            ctx.beginPath();
+        }
+
+        function draw(e) {
+            if (!painting) return;
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = 'black';
+
+            ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        }
+
+        canvas.addEventListener('mousedown', startPosition);
+        canvas.addEventListener('mouseup', endPosition);
+        canvas.addEventListener('mousemove', draw);
+
+        function resizeCanvasAndDownload() {
+            const smallCanvas = document.createElement('canvas');
+            const smallCtx = smallCanvas.getContext('2d');
+
+            smallCanvas.width = 28;
+            smallCanvas.height = 28;
+
+            // Draw the original canvas onto the small canvas
+            smallCtx.drawImage(canvas, 0, 0, 28, 28);
+
+            // Convert the small canvas to a data URL
+            const dataURL = smallCanvas.toDataURL('image/png');
+
+            // Create a link to download the image
+            const link = document.createElement('a');
+            link.href = dataURL;
+            link.download = 'drawing-28x28.png';
+            link.click();
+        }
+
+        function resizeCanvasAndSend() {
+            const smallCanvas = document.createElement('canvas');
+            const smallCtx = smallCanvas.getContext('2d');
+
+            smallCanvas.width = 28;
+            smallCanvas.height = 28;
+
+            // Draw the original canvas onto the small canvas
+            smallCtx.drawImage(canvas, 0, 0, 28, 28);
+
+            // Convert the small canvas to a data URL
+            const dataURL = smallCanvas.toDataURL('image/png');
+
+            // Send the image data to the server (example using fetch)
+            fetch('/upload/', {
+                method: 'POST',
+                body: JSON.stringify({ image: dataURL }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => response.json())
+              .then(data => console.log('Success:', data))
+              .catch(error => console.error('Error:', error));
+        }
+
+        document.getElementById('downloadBtn').addEventListener('click', resizeCanvasAndDownload);
+        document.getElementById('sendBtn').addEventListener('click', resizeCanvasAndSend);
+    </script>
+</body>
+</html>
