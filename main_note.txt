@@ -41,6 +41,9 @@ github
 
 
 링크들
+    오픈CV
+    https://opencv.org/
+    
     텐서플로
     https://www.tensorflow.org/?hl=ko
     

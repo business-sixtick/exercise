@@ -16,7 +16,9 @@
     <h1>Draw on the Canvas</h1>
     <canvas id="canvas" width="140" height="140"></canvas>
     <button id="downloadBtn">Download as 28x28 Image</button>
+    <button id="clearButton">Clear Canvas</button>
     <button id="sendBtn">Send to Server</button>
+    <span id='answer'></span>
 
     <script>
         const canvas = document.getElementById('canvas');
@@ -44,7 +46,9 @@
             ctx.beginPath();
             ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
         }
-
+        document.getElementById('clearButton').addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
         canvas.addEventListener('mousedown', startPosition);
         canvas.addEventListener('mouseup', endPosition);
         canvas.addEventListener('mousemove', draw);
@@ -90,9 +94,11 @@
                     'Content-Type': 'application/json'
                 }
             }).then(response => response.json())
-              .then(data => console.log('Success:', data))
+              .then(data => document.getElementById('answer').innerHTML = data.message) 
               .catch(error => console.error('Error:', error));
         }
+        //   .then(data => console.log('Success:', data))
+        //document.getElementById('responseMessage').innerHTML = data.message;
 
         document.getElementById('downloadBtn').addEventListener('click', resizeCanvasAndDownload);
         document.getElementById('sendBtn').addEventListener('click', resizeCanvasAndSend);
