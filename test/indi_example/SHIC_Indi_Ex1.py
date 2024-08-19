@@ -14,6 +14,7 @@ import numpy as np
     신한아이 인디 국내주식 예제입니다:
     코드를 입력하시고 Search 버튼을 누르시면
     종목코드에 해당하는 일별 차트 데이터 100개와
+
     종목 가격정보를 조회하여 출력합니다.
 '''
 
@@ -21,15 +22,14 @@ class IndiWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("IndiExample")
+    
 
-        self.IndiTR = QAxWidget("GIEXPERTCONTROL.GiExpertControlCtrl.1") ## ocx 파일을 실행 경로에 복사해주면 되는군. 64비트 환경에서 호환되는군 하위라 그런가???
-        #self.IndiTR = QAxWidget("GIEXPERTCONTROL64.GiExpertControl64Ctrl.1")
-        self.IndiTR.ReceiveData.connect(self.ReceiveData)
+        self.IndiTR = QAxWidget("SHINHANINDI.shinhanINDICtrl.1")
+        ret = self.IndiTR.ReceiveData.connect(self.ReceiveData)
+        print(ret)
         self.IndiTR.ReceiveSysMsg.connect(self.ReceiveSysMsg)
 
-        #self.IndiReal = QAxWidget("GIEXPERTCONTROL64.GiExpertControl64Ctrl.1")## 
-        self.IndiReal = QAxWidget("GIEXPERTCONTROL.GiExpertControlCtrl.1")
-    
+        self.IndiReal = QAxWidget("SHINHANINDI.shinhanINDICtrl.1")
         self.IndiReal.ReceiveRTData.connect(self.ReceiveRTData)
 
         self.rqidD = {}
