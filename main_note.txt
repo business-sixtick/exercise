@@ -6,8 +6,30 @@ extend program
 visual studio code
  - 팔렛트에서 Preferences: Configure User Snippets -- 템플릿 설정
 
+python 가상환경
+ - 가상환경에 쓸 python 버전을 설치한다 (path에 등록 안해도됨)
+ - 해당 설치 위치로 이동해서 python --version 을 실행해서 버전이 맞는지 확인한다
+ - python -m venv <가상환경이름> ex) python -m venv py3_7_9_tfgpu
+ - 현재 위치에 가상환경이름으로된 폴더가 생김 그위에 scripts 폴더로 이동한다
+ - C:\Users\hungh\AppData\Local\Programs\Python\Python37\py3_7_9_tfgpu\Scripts
+ - activate 입력하면 가상환경이 된다. C:\Users\hungh\AppData\Local\Programs\Python\Python37\py3_7_9_tfgpu\Scripts\activate
+ - 폴더 위치를 바꿔도 파이썬 버전이 유지된다. 고로 pip 를 사용하면 가상환경쪽에 설치된다.
+ - deactivate 입력하면 가상환경이 해제된다. 
+ - 주피터 노트북에서 커널선택하려면 가상환경폴더를 path 에 등록해줘야 한다 C:\Users\hungh\AppData\Local\Programs\Python\Python37\py3_7_9_tfgpu\Scripts
+
+python 개발환경 패키지 설치
+ - pip install tensorflow-gpu==2.8 (cuDNN 8.1, CUDA 11.2)
+ https://developer.nvidia.com/cuda-11.2.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal
+ https://developer.nvidia.com/rdp/cudnn-archive
+ - pip uninstall protobuf  텐서랑 출돌 문제가 있음. 버전을 내려야함
+ - pip install protobuf==3.20 주피터노트북 커널 재실행 해야함
+ - pip install opencv-python
+ - pip install pandas
+ - pip install seaborn
+
+
 python 
- - python.exe -m pip install --upgrade pip 파이프?? 업그레이드??
+ - python.exe -m pip install --upgrade pip  패키지 설치 프로그램 업데이트
  - https://pypi.org/   <<파이썬 패키지 인덱스  
  - pip list             << 파이썬 인스톨 패키지 리스트 ㅋㅋ  (scripts 폴더안에 있음)
  - pip show 패키지명        << 패키지 정보 보여줌
@@ -41,6 +63,12 @@ github
 
 
 링크들
+    https://www.kaggle.com/
+    ai 학습 데이터셋 정형
+
+    https://huggingface.co/
+    ai 학습 데이터셋  비정형
+
     오픈CV
     https://opencv.org/
     
