@@ -27,11 +27,18 @@ python 개발환경 패키지 설치
 
 
 python 
- - python.exe -m pip install --upgrade pip  패키지 설치 프로그램 업데이트
+ - python -m pip install --upgrade pip  패키지 설치 프로그램 업데이트
  - https://pypi.org/   <<파이썬 패키지 인덱스  
  - pip list             << 파이썬 인스톨 패키지 리스트 ㅋㅋ  (scripts 폴더안에 있음)
  - pip show 패키지명        << 패키지 정보 보여줌
 
+ssh-keygen -t rsa -b 4096 -C "business4dyd@gmail.com"
+SHA256:I6Dd0/bl2on1uGZWHpnB2Fmvzed2v8ZCAiGE1hKq22g business4dyd@gmail.com
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub -> 깃허브 셋팅즈 SSH key 등록
+man ssh (메뉴얼 보는거? 별거 아닌듯)
+ssh -T git@github.com
 git (.git/info/exclude 파일에 규칙을 정할수있다. 제외 파일 설정 가능 ignore)
  - 로컬 저장소 형상 관리 (gitbash : git 명령어 터미널)
  - commit : 저장하다
