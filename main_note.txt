@@ -23,7 +23,15 @@ python 개발환경 패키지 설치
  https://developer.nvidia.com/rdp/cudnn-archive
  - pip uninstall protobuf  텐서랑 출돌 문제가 있음. 버전을 내려야함
  - pip install protobuf==3.20 주피터노트북 커널 재실행 해야함
- - pip install -U opencv-python pandas seaborn scikit-learn sqlalchemy
+ - pip install -U opencv-python pandas seaborn scikit-learn sqlalchemy transformers
+ - pip install torch torchvision torchaudio
+
+리눅스
+ - curl -O https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
+ - chmod +x Anaconda3-2021.11-Linux-x86_64.sh
+ - ./Anaconda3-2021.11-Linux-x86_64.sh
+- export PATH="/root/anaconda3/bin:$PATH"
+- source ./.bashrc
 
 
 python 
