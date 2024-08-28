@@ -18,6 +18,7 @@ python 가상환경
  - 주피터 노트북에서 커널선택하려면 가상환경폴더를 path 에 등록해줘야 한다 C:\Users\hungh\AppData\Local\Programs\Python\Python37\py3_7_9_tfgpu\Scripts
 
 python 개발환경 패키지 설치
+ https://www.tensorflow.org/install?hl=ko  https://www.tensorflow.org/install/pip?hl=ko
  - pip install tensorflow-gpu==2.8 (cuDNN 8.1, CUDA 11.2)
  https://developer.nvidia.com/cuda-11.2.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal
  https://developer.nvidia.com/rdp/cudnn-archive
