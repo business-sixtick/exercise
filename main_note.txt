@@ -24,7 +24,7 @@ python 개발환경 패키지 설치
  https://developer.nvidia.com/rdp/cudnn-archive
  - pip uninstall protobuf  텐서랑 출돌 문제가 있음. 버전을 내려야함
  - pip install protobuf==3.20 주피터노트북 커널 재실행 해야함
- - pip install -U opencv-python pandas seaborn scikit-learn sqlalchemy transformers
+ - pip install -U opencv-python pandas seaborn scikit-learn sqlalchemy transformers mss pillow
  - pip install torch torchvision torchaudio
 
 리눅스
