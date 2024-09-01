@@ -68,6 +68,11 @@ git (.git/info/exclude 파일에 규칙을 정할수있다. 제외 파일 설정
  - git status
  - git commit -m 'init'
  - git push -u origin main
+ - git reset --soft HEAD^
+ - git reset --hard HEAD^
+
+ - git pull origin main
+
 
 github
  - 원격 저장소 형상 관리. 코드에디터도 있다.
